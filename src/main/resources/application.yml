@@ -2,6 +2,11 @@ server:
   port: 8081
 spring:
   jpa:
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://sql6.freesqldatabase.com:3306/sql6638594
+      username: sql6638594
+      password: a25032023@\
     hibernate:
       ddl-auto: none #
     properties:
@@ -9,8 +14,3 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect #
     show-sql: true
     generate-ddl: true
-  datasource:
-    url: jdbc:mysql://localhost:3306/user_management
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 132132132

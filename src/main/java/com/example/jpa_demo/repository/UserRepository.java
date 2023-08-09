@@ -16,15 +16,6 @@ public interface UserRepository extends JpaRepository<User,Long> {
     @Query(value = "SELECT * FROM user_management.login;" ,nativeQuery = true)
     List<User> getAllUser();
     User findAllById(Long id);
-//    @Modifying
-//    @Query(value = "insert into user_management.login(id,name,username,password)" +
-//            " values (:id,:name,:username,:password);",nativeQuery = true)
-//    User createUser(@RequestParam("id") Long id,@RequestParam("name") String name
-//    ,@RequestParam("username") String usernamel, @RequestParam("password") String password);
-//    @Modifying
-//    @Query(value = "DELETE FROM user_management.login" +
-//            "WHERE id=:idDelete;",nativeQuery = true)
-//    User deleteUserById(@RequestParam("idd") Long idDelete);
     @Modifying
     @Query(value = "DELETE FROM login l WHERE l.id=:id;",nativeQuery = true)
     User deleteUserById(@RequestParam("id") Long id);

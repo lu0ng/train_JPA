@@ -36,7 +36,4 @@ public class UserService {
     public void deleteUserByID(Long id){
         userRepository.deleteById(id);
     }
-    public User deleteUserByIDD(Long id){
-        return userRepository.deleteUserById(id);
-    }
 }
