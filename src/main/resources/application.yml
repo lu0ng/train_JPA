@@ -13,14 +13,12 @@ spring:
       hibernate:
         jdbc:
           batch_size: 5
-        dialect: org.hibernate.dialect.MySQL8Dialect #
+        dialect: org.hibernate.dialect.MySQL5Dialect #
         connection:
           username: luong
           password: 1
           url: jdbc:mysql://52.204.239.206:3306/user_management
           driver_class: com.mysql.cj.jdbc.Driver
         order_updates: true
-        generate_statistics: true
-
     show-sql: true
     generate-ddl: true

@@ -66,8 +66,8 @@ public class UserController {
             }
         }
         @PostMapping("/batch")
-        public ResponseEntity<?> createListUser(){
-            userService.createListUserByBatch();
+        public ResponseEntity<?> createListUser(List<User> list){
+            userService.createListUserByBatch(list);
             return new ResponseEntity<>(HttpStatus.OK);
         }
 
