@@ -1,7 +1,6 @@
 package com.example.jpa_demo.service;
 
 import com.example.jpa_demo.model.User;
-import javassist.NotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,7 @@ import java.util.List;
 
 @Service
 public class UserService {
-    Logger logger = LoggerFactory.getLogger(UserService.class);
+    Logger log = LoggerFactory.getLogger(UserService.class);
     @Autowired
     private UserRepository userRepository;
     public List<User> getAllUsers(){
@@ -35,5 +34,11 @@ public class UserService {
     }
     public void deleteUserByID(Long id){
         userRepository.deleteById(id);
+    }
+    public void createListUserByBatch() {
+
+        }
+    public List<User> updateUserByBatchProcess(){
+        return null;
     }
 }

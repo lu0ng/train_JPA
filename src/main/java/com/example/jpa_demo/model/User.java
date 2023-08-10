@@ -6,16 +6,17 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+
 @Entity
-@Table(name = "login")
+@Table(name = "login",schema = "user_management")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     @Column(name = "name")
     private String name;
-    @Column(name = "user_name")
-    private String username;
     @Column(name = "password")
     private String password;
+    @Column(name = "user_name")
+    private String username;
 }

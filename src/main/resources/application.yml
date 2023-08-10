@@ -1,16 +1,26 @@
 server:
   port: 8081
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://52.204.239.206:3306/user_management
+    username: luong
+    password: 1
   jpa:
-    datasource:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://sql6.freesqldatabase.com:3306/sql6638594
-      username: sql6638594
-      password: a25032023@\
     hibernate:
       ddl-auto: none #
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect #
+        jdbc:
+          batch_size: 5
+        dialect: org.hibernate.dialect.MySQL8Dialect #
+        connection:
+          username: luong
+          password: 1
+          url: jdbc:mysql://52.204.239.206:3306/user_management
+          driver_class: com.mysql.cj.jdbc.Driver
+        order_updates: true
+        generate_statistics: true
+
     show-sql: true
     generate-ddl: true
